@@ -1,4 +1,10 @@
-# Es modules
+---
+title: Ecmascript Modules
+eleventyNavigation:
+  key: Es modules
+  parent: Misconceptions
+  order: 50
+---
 
 All modern browsers support standard es modules, using `import` and `export` statements:
 

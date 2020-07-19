@@ -3,10 +3,8 @@ title: Test Runner Mocha
 eleventyNavigation:
   key: Mocha
   parent: Test Runner
-  order: 100
+  order: -90
 ---
-
-# Test Runner Mocha
 
 Test framework implementation of [Mocha](https://mochajs.org/) for Web Test Runner
 
@@ -54,22 +52,13 @@ If you're writing tests as HTML, you can import this library to run tests with m
 </html>
 ```
 
-## Configuring mocha options
+Configuring mocha to use TDD is [not yet supported](https://github.com/modernweb-dev/web/issues/59).
 
-You can configure mocha options using the `testFramework.config` option:
+### Browser compatible code
 
-```js
-module.exports = {
-  testFramework: {
-    config: {
-      ui: 'bdd',
-      timeout: '2000',
-    },
-  },
-};
-```
+Web Test Runner is based on bundle-free development, and runs your tests in the browser without any modification. This means you need to make sure your tests, code and test libraries can work in the browser as is. For example they should be standard es modules.
 
-The config entry accepts any of the official [mocha browser options](https://mochajs.org/#browser-configuration).
+The test runner server can be configured to do some code transformations on the fly, although this may impact performance. [Check out the docs](./server.md) to learn more about that.
 
 ### Libraries
 
