@@ -1065,13 +1065,34 @@
     human-id "^1.0.2"
     prettier "^1.18.2"
 
-"@d4kmor/cli@^0.1.4", "@d4kmor/cli@^0.1.5":
+"@d4kmor/cli@^0.1.4":
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/@d4kmor/cli/-/cli-0.1.5.tgz#6b3f3b89f77a00bd93d0a6f9768a8a6b7f0649c4"
   integrity sha512-LhXrwo1jlZIE1kYLf6hSZtGVf3lEjqWb81Jx6nkHQ/EcSHSiTjvhDbgC7I3SSHLIcr6lHbBdg+++ZItHLKH53g==
   dependencies:
     "@11ty/eleventy" "^0.11.0"
     "@d4kmor/eleventy-plugin-mdjs" "^0.1.0"
+    "@d4kmor/eleventy-rocket-nav" "^0.1.1"
+    "@d4kmor/navigation" "^0.1.0"
+    "@open-wc/building-rollup" "^1.3.1"
+    command-line-args "^5.1.1"
+    command-line-usage "^6.1.0"
+    deepmerge "^4.2.2"
+    es-dev-server "^1.56.0"
+    glob "^7.1.6"
+    rollup "^2.16.0"
+    rollup-plugin-clear "^2.0.7"
+    rollup-plugin-copy "^3.3.0"
+    rollup-plugin-visualizer "^4.0.4"
+    rollup-plugin-workbox "^5.0.1"
+
+"@d4kmor/cli@^0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@d4kmor/cli/-/cli-0.1.6.tgz#e553f24f898ef4e2f9c66bca83dd5822fa9e5bd6"
+  integrity sha512-MBY5Hla7O5X3XgQLXhL9yaEl0rRsM4fA8Az+SqTrzxbMgOoN8weTIS+QPgRa1JcwxRYHq8qowL5BMy166Uwybg==
+  dependencies:
+    "@11ty/eleventy" "^0.11.0"
+    "@d4kmor/eleventy-plugin-mdjs" "^0.1.1"
     "@d4kmor/eleventy-rocket-nav" "^0.1.1"
     "@d4kmor/navigation" "^0.1.0"
     "@open-wc/building-rollup" "^1.3.1"
@@ -1098,6 +1119,14 @@
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@d4kmor/eleventy-plugin-mdjs/-/eleventy-plugin-mdjs-0.1.0.tgz#e7625e4f05cae9f696d00f3a475b293dde3da804"
   integrity sha512-5wbqXlMQxd38/0oLTXdFVuHc67+QPDRSkCURVF7d/j/vP/3ilK9R+a/ov+/5PnnYBfDMYUGg8IPQmcU/XV+zyg==
+  dependencies:
+    "@mdjs/core" "^0.3.2"
+    unist-util-visit "^2.0.3"
+
+"@d4kmor/eleventy-plugin-mdjs@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@d4kmor/eleventy-plugin-mdjs/-/eleventy-plugin-mdjs-0.1.1.tgz#fe676e0567a34d576879d58238d9c17e5f3550df"
+  integrity sha512-79mnzaWbny5YSrSU6CQiJpofDa1dDsVgz4Ks1/QFt4/nYQzJ3WtAthvyWIGvLZQiTKkvbe+PTaHwu55RvOpF2g==
   dependencies:
     "@mdjs/core" "^0.3.2"
     unist-util-visit "^2.0.3"

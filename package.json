@@ -22,7 +22,7 @@
     "update:tsconfig": "ts-node scripts/update-package-tsconfig.ts"
   },
   "dependencies": {
-    "@d4kmor/cli": "^0.1.5",
+    "@d4kmor/cli": "^0.1.6",
     "@d4kmor/launch": "^0.1.9",
     "patch-package": "^6.2.2"
   },
