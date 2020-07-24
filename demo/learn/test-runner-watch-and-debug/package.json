@@ -1,11 +1,12 @@
 {
-  "name": "@web/demo-test-runner-getting-started",
+  "name": "@web/demo-test-runner-watch-and-debug",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
     "test": "web-test-runner test/**/*.test.js --node-resolve",
-    "test:ci": "node ../../../packages/test-runner/dist/test-runner.js test/**/*.test.js --node-resolve"
+    "test:ci": "node ../../../packages/test-runner/dist/test-runner.js test/**/*.test.js --node-resolve",
+    "test:watch": "web-test-runner test/**/*.test.js --node-resolve --watch"
   },
   "devDependencies": {
     "@open-wc/testing": "^2.0.0",

@@ -32,12 +32,11 @@ Now that we know what we want we need to place this file somewhere and run a too
    npm i -D @web/test-runner @open-wc/testing
    ```
 
-2. Add a command to run it once and to watch it to to `package.json`
+2. Add a script to your `package.json`
    ```json
    {
      "scripts": {
-       "test": "web-test-runner test/**/*.test.js --node-resolve",
-       "test:watch": "web-test-runner test/**/*.test.js --node-resolve --watch"
+       "test": "web-test-runner test/**/*.test.js --node-resolve"
      }
    }
    ```

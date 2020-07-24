@@ -11,7 +11,7 @@ Welcome 👋
 
 To use modern web you need to know what the web itself (without any frameworks) offers.
 
-You will be surprised what is possible. 🤗
+You will be surprised how fare the web has involved. 🤗
 
 ## Misconceptions
 
@@ -30,4 +30,10 @@ Or how we like to call it "frequently misunderstood/forgotten web basics in the 
 
 ## Test Runner
 
-When creating a web application it's important to have the confidence that your
+Testing your code is very important to have the confidence to release often.
+Green tests should mean that the change is good to go 👍
+
+How can you get to this state as well?
+
+- [Getting started](./test-runner/getting-started.md)
+- [Watch and debug](./test-runner/watch-and-debug.md)
