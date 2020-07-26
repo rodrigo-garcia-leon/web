@@ -1065,10 +1065,10 @@
     human-id "^1.0.2"
     prettier "^1.18.2"
 
-"@d4kmor/cli@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@d4kmor/cli/-/cli-0.1.8.tgz#43f04248756b42447e8f2e3847b663bc5f7b2c52"
-  integrity sha512-iW6j/tMXrBrCrWjAijRPShARWNP9KJP4dk8vQvvOtfcn0c32B9sH84yIiGBCvqo8l5IdroU9e8ty1r+3JE34Ew==
+"@d4kmor/cli@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@d4kmor/cli/-/cli-0.1.9.tgz#8fa5b2201f1bce4fbeda7662ee6f01ebd75b41cd"
+  integrity sha512-S50cpod1earFA9Mi79jWrv0TlgiSmv3URfihH1m0kPl5xug/c9eKJ/54g8EHdW12ckfDZ3o4eK4FoGxBUxKmCA==
   dependencies:
     "@11ty/eleventy" "^0.11.0"
     "@d4kmor/eleventy-plugin-mdjs" "^0.1.1"
@@ -1110,12 +1110,12 @@
     dependency-graph "^0.8.1"
     sax-wasm "^1.4.5"
 
-"@d4kmor/launch@^0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@d4kmor/launch/-/launch-0.1.11.tgz#61aaf2c0b04952b87b9e7b756c21d667493749e1"
-  integrity sha512-aKPYeMve8cmfVIRiyqwKpXRwPSmgPQcrru4QTsYKWX1DySsAPmDKolPUmqxcQP2X57XAkj7jEXfwRxHY3feaTg==
+"@d4kmor/launch@^0.1.12":
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/@d4kmor/launch/-/launch-0.1.12.tgz#9b438ec05940eee51e77338b17c0233285ea871f"
+  integrity sha512-opDEqNwovm4RVfhI8+7o4Bu38mQQwjr3j359Ez9X4P7qkrPgh4uVmpaK4bEZeac94xEKMwHfLLs6e1zORR8xXQ==
   dependencies:
-    "@d4kmor/cli" "^0.1.8"
+    "@d4kmor/cli" "^0.1.9"
     "@d4kmor/drawer" "^0.1.0"
 
 "@d4kmor/navigation@^0.1.0":

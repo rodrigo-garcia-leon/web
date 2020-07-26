@@ -1,7 +1,10 @@
-import { expect } from '@open-wc/testing';
+import { expect, fixture } from '@open-wc/testing';
 import { sum } from '../src/sum.js';
 
-it('sums up 2 numbers', () => {
-  expect(sum(1, 1)).to.equal(2);
-  expect(sum(3, 12)).to.equal(15);
+it('doSomething does not effect state', () => {
+  const el = await fixture('...');
+
+  expect(el.state).to.be.true;
+  el.doSomething();
+  expect(el.state).to.be.true;
 });
