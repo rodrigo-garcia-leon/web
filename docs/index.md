@@ -1,7 +1,7 @@
 ---
 title: Modern Web
 layout: home.njk
-slogan: All the fundaments you need to create a modern web with a modern browser.
+slogan: Developer tools for modern web development.
 callToActionItems:
   [
     {

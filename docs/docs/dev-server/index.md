@@ -5,4 +5,5 @@ eleventyNavigation:
   order: 20
 ---
 
-For local development.
+A server for local development - not yet usable standalone.
+You can however use it's parts with the [@web/test-runner](../test-runner/overview.md) already.

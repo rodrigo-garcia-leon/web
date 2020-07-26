@@ -33,7 +33,7 @@ The same tests are run in watch mode but you do get multiple additional features
 
 ### Preparation
 
-In order to see the benefit we start of with the code from [Getting Started](./getting-started.md) and add an additional feature.
+In order to see the benefit we start of with the code from [Getting Started](../getting-started.md) and add an additional feature.
 
 We want to be able to pass in a string like `1 + 2 + 3` to get it's sum.
 
