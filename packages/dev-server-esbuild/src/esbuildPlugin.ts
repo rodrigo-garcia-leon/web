@@ -1,6 +1,13 @@
 import { startService, Service, Loader, Message } from 'esbuild';
 import path from 'path';
-import { Plugin, PluginSyntaxError, Logger, DevServerCoreConfig } from '@web/dev-server-core';
+import fs from 'fs/promises';
+import {
+  Plugin,
+  PluginSyntaxError,
+  Logger,
+  DevServerCoreConfig,
+  getRequestFilePath,
+} from '@web/dev-server-core';
 import { URL, pathToFileURL, fileURLToPath } from 'url';
 import { getEsbuildLoader } from './getEsbuildLoader';
 import { getEsbuildTarget } from './getEsbuildTarget';
@@ -15,6 +22,15 @@ export interface EsBuildPluginArgs {
   jsxFragment?: string;
   loaders?: Record<string, Loader>;
   define?: { [key: string]: string };
+}
+
+async function fileExists(path: string) {
+  try {
+    await fs.access(path);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export function esbuildPlugin(args: EsBuildPluginArgs): Plugin {
@@ -48,10 +64,37 @@ export function esbuildPlugin(args: EsBuildPluginArgs): Plugin {
       });
     },
 
+    serverStop() {
+      service?.stop();
+    },
+
     resolveMimeType(context) {
       if (handledExtensions.some(ext => context.path.endsWith(ext))) {
         return 'js';
       }
+    },
+
+    async resolveImport({ source, context }) {
+      if (!((args.ts || args.tsx) && ['.tsx', '.ts'].some(ext => context.path.endsWith(ext)))) {
+        // only handle typescript files
+        return;
+      }
+
+      if (!source.endsWith('.js') || !source.startsWith('.')) {
+        // only handle relative imports
+        return;
+      }
+
+      // a TS file imported a .js file relatively, but they might intend to import a .ts file instead
+      // check if the .ts file exists, and rewrite it in that case
+      const filePath = getRequestFilePath(context, config.rootDir);
+      const fileDir = path.dirname(filePath);
+      const importAsTs = source.substring(0, source.length - 3) + '.ts';
+      const importedTsFilePath = path.join(fileDir, importAsTs);
+      if (!(await fileExists(importedTsFilePath))) {
+        return;
+      }
+      return importAsTs;
     },
 
     transformCacheKey(context) {
